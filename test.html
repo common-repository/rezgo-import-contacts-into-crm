@@ -1,0 +1,171 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" >
+jQuery(document).ready(function($) {
+    $( "#start" ).click(function() {
+	var data = $("#input").val()
+	$('#output').val("processing...");
+	$.post("../../../?rezgo-crm-webhook=true", data, function(response) {
+		  $('#output').val(response);
+	  }
+	  //,"json"
+	);
+	return false;
+    });	
+    
+});
+</script>
+
+Edit xml <br>
+<textarea id="input" cols=100 rows=25>
+<?xml version="1.0" encoding="UTF-8"?>
+ <response>
+ <total>1</total>
+ <booking>
+ <trans_num>5K1S4X3Q0C</trans_num>
+ <item_id>29438</item_id>
+ <cid>4385</cid>
+ <tour_name><![CDATA[River Rafting Demo]]></tour_name>
+ <option_name><![CDATA[9:00 am]]></option_name>
+ <date>1343804400</date>
+ <date_range>1343804400</date_range>
+ <date_purchased>1339198714</date_purchased>
+  
+ <date_purchased_local>1339227480</date_purchased_local>
+  
+ <updated>0</updated>
+  
+ <prices>
+         <price_adult>258</price_adult>
+ </prices>
+ <adult_num>2</adult_num>
+ <child_num>0</child_num>
+ <senior_num>0</senior_num>
+ <price4_num></price4_num>
+ <price5_num></price5_num>
+ <price6_num></price6_num>
+ <price7_num></price7_num>
+ <price8_num></price8_num>
+ <price9_num></price9_num>
+  
+ <adult_label><![CDATA[Adult]]></adult_label>
+ <child_label><![CDATA[Child (11-15)]]></child_label>
+ <senior_label><![CDATA[Senior]]></senior_label>
+ <price4_label><![CDATA[Price 4]]></price4_label>
+ <price5_label><![CDATA[Price 5]]></price5_label>
+ <price6_label><![CDATA[Price 6]]></price6_label>
+ <price7_label><![CDATA[Price 7]]></price7_label>
+ <price8_label><![CDATA[Price 8]]></price8_label>
+ <price9_label><![CDATA[Price 9]]></price9_label>
+  
+     <currency_symbol>US $</currency_symbol>
+     <currency_separator>,</currency_separator>
+     <currency_decimals>2</currency_decimals>
+     <currency_base>USD</currency_base>
+     <sub_total>258</sub_total>
+ <fees>5%</fees>
+  
+ <line_items>
+     <line_item>
+         <label><![CDATA[Taxes and Fees]]></label>
+         <amount>12.9</amount>
+         <percent>5</percent>
+     </line_item>
+ </line_items>
+  
+ <first_name><![CDATA[John]]></first_name>
+ <last_name><![CDATA[Doe]]></last_name>
+ <address_1><![CDATA[123 Anywhere]]></address_1>
+ <address_2><![CDATA[]]></address_2>
+ <city><![CDATA[Vancouver]]></city>
+ <stateprov><![CDATA[BC]]></stateprov>
+ <country>ca</country>
+ <postal_code>V7V 1V1</postal_code>
+ <phone_number><![CDATA[604-555-1212]]></phone_number>
+ <email_address><![CDATA[john.doe@example.com]]></email_address>
+  
+     <passengers>
+ <passenger>
+     <type num="1">adult</type>
+     <first_name><![CDATA[John]]></first_name>
+     <last_name><![CDATA[Doe]]></last_name>
+     <phone_number><![CDATA[604-555-1212]]></phone_number>
+     <email_address><![CDATA[john.doe@example.com]]></email_address>
+     <total_forms>2</total_forms>
+     <forms>
+         <form num="1">
+             <id>7365</id>
+             <type>select</type>
+             <question><![CDATA[Swimming Ability]]></question>
+             <answer><![CDATA[Intermediate]]></answer>
+         </form>
+         <form num="2">
+             <id>7366</id>
+             <type>checkbox</type>
+             <question><![CDATA[Are you afraid of the water?]]></question>
+             <answer><![CDATA[on]]></answer>
+         </form>
+     </forms>
+ </passenger>
+ <passenger>
+     <type num="2">adult</type>
+     <first_name><![CDATA[Jane]]></first_name>
+     <last_name><![CDATA[Doe]]></last_name>
+     <phone_number><![CDATA[604-555-1212]]></phone_number>
+     <email_address><![CDATA[jane.doe@example.com]]></email_address>
+     <total_forms>2</total_forms>
+     <forms>
+         <form num="1">
+             <id>7365</id>
+             <type>select</type>
+             <question><![CDATA[Swimming Ability]]></question>
+             <answer><![CDATA[Intermediate]]></answer>
+         </form>
+         <form num="2">
+             <id>7366</id>
+             <type>checkbox</type>
+             <question><![CDATA[Are you afraid of the water?]]></question>
+             <answer><![CDATA[on]]></answer>
+         </form>
+     </forms>
+ </passenger>
+     </passengers>
+  
+ <price_labels><![CDATA[price_adult, price_child, price_senior, price4, price5, price6, price7, price8, price9]]></price_labels>
+  
+ <price_range>
+     <date value="2012-08-01">
+         <price_adult>129</price_adult>
+         <price_child>89</price_child>
+         <price_senior></price_senior>
+         <price4></price4>
+         <price5></price5>
+         <price6></price6>
+         <price7></price7>
+         <price8></price8>
+         <price9></price9>
+     </date>
+  
+ </price_range>
+ <overall_total>270.90</overall_total>
+ <overall_paid></overall_paid>
+ <trigger_code></trigger_code>
+ <payment_method><![CDATA[Credit Cards]]></payment_method>
+ <card_type><![CDATA[]]></card_type>
+ <card_name><![CDATA[]]></card_name>
+ <card_number><![CDATA[]]></card_number>
+ <status>2</status>
+ <status_text>Payment Pending</status_text>
+ <checkin_status></checkin_status>
+ <ticketing>0</ticketing>
+ <class>tour</class>
+ <refid></refid>
+ </booking>
+ <gt>0.00915</gt>
+ </response>
+</textarea>
+<br>
+<button id='start'>Call webhook.php</button>
+<br>
+<hr>Result<br>
+<textarea id="output" cols=100 rows=3>
+</textarea> 
